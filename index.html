@@ -23,14 +23,40 @@
     </div>
 
     <form action="#" class="formSignUp">
-        <div class="FormName">
-            <label for="name" data-help="names like Dirk, Patrick, Steve"></label>
+        <div class="formName">
+            <label for="name" data-help="Names like Dirk, Patrick, Steve"></label>
             <input id="name" placeholder="Name" name="name" value="" type="text" 
             pattern="^[0-9]+$" size="30" maxlength="15" required>
         </div>
 
-        <div class="FormSurname">
-            <label for="surname"></label>
+        <div class="formSurname">
+            <label for="surname" data-help="Surname examples:like Solace or Thatcher"></label>
+            <input id="surname" placeholder="Surname" name="surname" value="" type="text"
+            size="30" maxlength="20" required>
+        </div>
+
+        <div class="formEmail">
+            <label for="email" data-help="example@example.com"></label>
+            <input id="email" placeholder="e-mail" name="email" value="" type="email"
+            size="30" maxlength="50" required>
+        </div>
+
+        <div class="formPhoneNumber">
+            <label for="phoneNumber" data-help="1-541-754-3010"></label>
+            <input id="tel" placeholder="Phone Number" name="tel" type="tel"
+            size="30" maxlength="20" required>
+        </div>
+
+        <div class="password">
+            <label for="password"></label>
+            <input id="password" name="password" type="password"
+            size="30" maxlength="40" required>
+        </div>
+
+        <div class="confirmPassword">
+            <label for="confirmPassword"></label>
+            <input id="confirmPassword" name="confirmPassword" type="password"
+            size="30" maxlength="40" required>
         </div>
     </form>
 </body>
