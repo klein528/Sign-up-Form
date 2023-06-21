@@ -67,6 +67,10 @@ input[type="password"] {
     border: 1px solid #9EE4D9;
 }
 
+input[type="text"]:active {
+    color: red;
+}
+
 
 input[type="text"]:focus {
     background-color: transparent;
@@ -84,6 +88,6 @@ input[type="password"]:focus {
 }
 
 ::placeholder {
-    color: #161E1E;
+    color: #14386e;
     padding-left: 5px;
 }
