@@ -20,7 +20,7 @@ body::before {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    filter: blur(5px);
+    filter: blur(3px);
     z-index: -1;
 }
 
@@ -67,27 +67,64 @@ input[type="password"] {
     border: 1px solid #9EE4D9;
 }
 
-input[type="text"]:active {
-    color: red;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    color: greenyellow;
 }
 
 
-input[type="text"]:focus {
-    background-color: transparent;
-}
-
-input[type="email"]:focus {
-    background-color: transparent;
-}
-input[type="tel"]:focus {
-    background-color: transparent;
-}
-
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
 input[type="password"]:focus {
     background-color: transparent;
 }
 
+input[type="text"]:invalid:focus,
+input[type="email"]:invalid:focus,
+input[type="tel"]:invalid:focus,
+input[type="password"]:invalid:focus {
+    color: red;
+    border: none;
+    outline: 2px solid red;
+}
+
+input[type="text"]:valid:focus,
+input[type="email"]:valid:focus,
+input[type="tel"]:valid:focus,
+input[type="password"]:valid:focus {
+    color: rgb(80, 242, 91);
+    border: none;
+    outline: 2px solid rgb(80, 242, 91);
+}
+
 ::placeholder {
-    color: #14386e;
     padding-left: 5px;
+    color: #14386e;
+}
+
+.formName,
+.formSurname,
+.formEmail,
+.formPhoneNumber{
+    position: relative;
+}
+
+.formName [data-help]::after,
+.formSurname [data-help]::after,
+.formEmail [data-help]::after,
+.formPhoneNumber [data-help]::after {
+    content: attr(data-help);
+    display: ;
+    position: absolute;
+    left: 85px;
+    padding: 5px;
+    font-size: small;
+    border-radius: 3px;
+}
+
+.formName:hover [data-help]::after {
+    display: block;
 }
