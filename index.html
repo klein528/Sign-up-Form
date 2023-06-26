@@ -27,37 +27,37 @@
         <div class="userData">
         <div class="formName">
             <input id="name" placeholder="Name" name="name" value="" type="text" size="30" maxlength="15" required>
-            <label for="name" data-help="Names like: Dirk, Patrick, Steve"></label>
+            <label for="name" data-help="(Names like: Dirk, Patrick, Steve)"></label>
         </div>
 
         <div class="formSurname">
             <input id="surname" placeholder="Surname" name="surname" value="" type="text"
             size="30" maxlength="20" required>
-            <label for="surname" data-help="Surname examples:like Solace or Thatcher"></label>
+            <label for="surname" data-help="(Surname examples: Solace or Thatcher)"></label>
         </div>
 
         <div class="formEmail">
             <input id="email" placeholder="e-mail" name="email" value="" type="email"
             size="30" minlength="" maxlength="50" required>
-            <label for="email" data-help="example@example.com"></label>
+            <label for="email" data-help="(Format example@example.com)"></label>
         </div>
 
         <div class="formPhoneNumber">
             <input id="tel" placeholder="Phone Number" name="tel" type="tel" 
             pattern="^[0-9]+$" size="30" minlength="10" maxlength="10" required>
-            <label for="phoneNumber" data-help="1-541-754-301"></label>
+            <label for="phoneNumber" data-help="Example: 1-541-754-301"></label>
         </div>
 
         <div class="password">
             <input id="password" placeholder="Password" name="password" type="password"
             size="30" minlength="5" maxlength="32" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*.]).{8,}$" title="Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one digit, and one special character (!@#$%^&*)." required>
-            <label for="password"></label>
+            <label for="password" data-help="(Example: Min 8 charackters: Slicer*4545)"></label>
         </div>
 
         <div class="confirmPassword">
             <input id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" type="password"
             size="30" minlength="5" maxlength="32" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*.]).{8,}$" title="Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one digit, and one special character (!@#$%^&*)."  required>
-            <label for="confirmPassword"></label>
+            <label for="confirmPassword" id="confirmPasswordLabel" data-help=""></label>
         </div>
         </div>
     </form>

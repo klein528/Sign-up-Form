@@ -108,23 +108,107 @@ input[type="password"]:valid:focus {
 .formName,
 .formSurname,
 .formEmail,
-.formPhoneNumber{
+.formPhoneNumber,
+.password{
+    position: relative;
+}
+
+.formName,
+.formSurname,
+.formEmail,
+.formPhoneNumber,
+.password {
     position: relative;
 }
 
 .formName [data-help]::after,
 .formSurname [data-help]::after,
 .formEmail [data-help]::after,
-.formPhoneNumber [data-help]::after {
+.formPhoneNumber [data-help]::after,
+.password [data-help]::after {
     content: attr(data-help);
-    display: ;
     position: absolute;
+    display: none;
     left: 85px;
     padding: 5px;
     font-size: small;
     border-radius: 3px;
+    color: white;
+    background-color: rgb(34, 184, 211);
 }
 
-.formName:hover [data-help]::after {
+.formName:hover [data-help]::after,
+.formSurname:hover [data-help]::after,
+.formEmail:hover [data-help]::after,
+.formPhoneNumber:hover [data-help]::after,
+.password:hover [data-help]::after {
     display: block;
+}
+
+@-webkit-keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tooltip-animation {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.formName [data-help]::after,
+.formSurname [data-help]::after,
+.formEmail [data-help]::after,
+.formPhoneNumber [data-help]::after,
+.password [data-help]::after {
+    animation: tooltip-animation 0.5 2s forwards;
+}
+
+.formSignUp input:focus:invalid + label:after {
+    content: attr(data-help);
+    animation: silo-help 100s;
 }
