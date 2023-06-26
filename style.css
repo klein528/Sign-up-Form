@@ -240,6 +240,18 @@ input[type="password"]:valid:focus {
     .userData {
         margin: 0;
     }
+    .submit {
+        margin: 10px;
+    }
+}
+
+@media all and (max-width: 1030px) {
+    .userData {
+        margin: 0;
+    }
+    .submit {
+        margin: 0 80px;
+    }
 }
 
 @media all and (max-width: 1290px) {
