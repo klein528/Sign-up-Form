@@ -213,6 +213,23 @@ input[type="password"]:valid:focus {
     animation: silo-help 100s;
 }
 
+.submit {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #c9eff7;
+}
+
+.submit:hover {
+    color: #0acbf6;
+    background-color: #b4eaf5;
+}
+
+.submit:active {
+    color: yellow;
+    background-color: rgb(38, 177, 182);
+}
+
 @media all and (max-width: 500px) {
     .userData {
         margin: 0;

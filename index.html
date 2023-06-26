@@ -44,7 +44,7 @@
 
         <div class="formPhoneNumber">
             <input id="tel" placeholder="Phone Number" name="tel" type="tel" 
-            pattern="^[0-9]+$" size="30" minlength="10" maxlength="10" required>
+            pattern="^[0-9]+$" size="30" minlength="10" maxlength="15" required>
             <label for="phoneNumber" data-help="Example: 1-541-754-301"></label>
         </div>
 
@@ -58,6 +58,10 @@
             <input id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" type="password"
             size="30" minlength="5" maxlength="32" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*.]).{8,}$" title="Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one digit and one special character (!@#$%^&*)."  required>
             <label for="confirmPassword" id="confirmPasswordLabel" data-help=""></label>
+        </div>
+
+        <div class="form-submit">
+            <input name="submit" type="submit" id="submit" class="submit" value="Submit">
         </div>
         </div>
     </form>
